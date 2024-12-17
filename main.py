@@ -1,7 +1,8 @@
 # Importações necessárias
+from validate_docbr import CPF
 import streamlit as st
 import pandas as pd
-from validate_docbr import CPF
+#from validate_docbr import CPF
 from datetime import datetime
 import io
 import sqlite3
@@ -10,6 +11,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.utils import ImageReader
 import textwrap
+import csv
 
 def limpar_banco_dados():
     conn = sqlite3.connect('certificados.db')
